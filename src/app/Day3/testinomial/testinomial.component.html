@@ -1,0 +1,19 @@
+<div class="grid">
+    <mat-card *ngFor="let t of testimonials" class="testinomial-card">
+        <div class="header">
+            <img [src]="t.image" alt="user">
+            <div>
+                <h3>{{t.name}}</h3>
+                <p class="role">{{t.role}}</p>
+            </div>
+        </div>
+
+        <mat-card-content>
+            <p class="message">{{t.message}}</p>
+        </mat-card-content>
+
+        <div class="rating">
+            <mat-icon *ngFor="let star of [].constructor(t.rating)">star</mat-icon>
+        </div>
+    </mat-card>
+</div>

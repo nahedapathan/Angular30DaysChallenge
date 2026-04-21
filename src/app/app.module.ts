@@ -11,13 +11,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { TestinomialComponent } from './Day3/testinomial/testinomial.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginPageComponent,
     ProductListComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    TestinomialComponent
   ],
   imports: [
     BrowserModule,
