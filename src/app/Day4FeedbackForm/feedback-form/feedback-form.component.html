@@ -1,0 +1,41 @@
+<div class="container">
+    <mat-card class="form-card">
+              <h2>FeedBack Form</h2>
+              <form [formGroup]="feedbackForm" (ngSubmit)="onSubmit()">
+                     <mat-form-field  appearance="outline" class="full-width">
+                        <mat-label>Name</mat-label>
+                        <input matInput formControlName="name" />
+                        <mat-error *ngIf="feedbackForm.get('name')?.hasError('requires')">
+                            Name is Required
+                        </mat-error>
+                     </mat-form-field>
+
+                     <mat-form-field appearance="outline" class="full-width">
+                          <mat-label>Email</mat-label>
+                          <input matInput formControlName="email" />
+                          <mat-error *ngIf="feedbackForm.get('email')?.hasError('required')">
+                                 Email is Required
+                          </mat-error>
+                          <mat-error *ngIf="feedbackForm.get('email')?.hasError('email')">
+                                 Email valid Email
+                          </mat-error>
+                     </mat-form-field>
+
+                     <mat-form-field appearance="outline" class="full-width">
+                                 <mat-label>Message</mat-label>
+                                 <textarea matInput rows="4" formControlName="message"></textarea>
+                                 <mat-hint align="end">
+                                          {{feedbackForm.get('message')?.value?.length || 0 }}/200
+                                 </mat-hint>
+                                 <mat-error *ngIf="feedbackForm.get('message')?.hasError('required')">
+                                       Message is Required
+                                 </mat-error>
+                     </mat-form-field>
+
+                     <button mat-raised-button color="accent" type="submit" [disabled]="feedbackForm.invalid || loading">
+                         <mat-spinner *ngIf="loading" diameter="20"></mat-spinner>
+                         <span *ngIf="!loading">Submit</span>
+                     </button>
+              </form>
+    </mat-card>
+</div>

@@ -12,6 +12,11 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { TestinomialComponent } from './Day3/testinomial/testinomial.component';
+import { FeedbackFormComponent } from './Day4FeedbackForm/feedback-form/feedback-form.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -19,7 +24,8 @@ import { TestinomialComponent } from './Day3/testinomial/testinomial.component';
     LoginPageComponent,
     ProductListComponent,
     ProductCardComponent,
-    TestinomialComponent
+    TestinomialComponent,
+    FeedbackFormComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +34,11 @@ import { TestinomialComponent } from './Day3/testinomial/testinomial.component';
     BrowserAnimationsModule,
     MatCardModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSnackBarModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
