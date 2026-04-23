@@ -1,0 +1,21 @@
+<div class="grid">
+
+  <mat-card class="info-card" *ngFor="let item of cards">
+
+    <div class="card-header">
+      <mat-icon class="icon">{{ item.icon }}</mat-icon>
+      <h3>{{ item.title }}</h3>
+    </div>
+
+    <mat-card-content>
+      <p>{{ item.description }}</p>
+      <h2>{{ item.value }}</h2>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button mat-button color="primary">View Details</button>
+    </mat-card-actions>
+
+  </mat-card>
+
+</div>
